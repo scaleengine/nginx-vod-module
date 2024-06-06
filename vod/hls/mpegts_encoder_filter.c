@@ -85,7 +85,7 @@ static const u_char pmt_entry_template_aac[] = {
 };
 
 static const u_char pmt_entry_template_mp3[] = {
-	0x03, 0xe0, 0x00, 0xf0, 0x00,
+	0x04, 0xe0, 0x00, 0xf0, 0x00,
 };
 
 static const u_char pmt_entry_template_dts[] = {
