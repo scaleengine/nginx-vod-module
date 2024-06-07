@@ -2811,6 +2811,11 @@ mp4_parser_process_moov_atom_callback(void* ctx, atom_info_t* atom_info)
 			extra_data_required = FALSE;
 			break;
 
+		case FORMAT_MP3:
+			metadata_parse_context.media_info.codec_id = VOD_CODEC_ID_MP3;
+			extra_data_required = FALSE;
+			break;
+
 		case FORMAT_EAC3:
 			metadata_parse_context.media_info.codec_id = VOD_CODEC_ID_EAC3;
 			extra_data_required = FALSE;

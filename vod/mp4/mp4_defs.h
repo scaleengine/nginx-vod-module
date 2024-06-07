@@ -86,6 +86,7 @@
 #define FORMAT_EAC3    (0x332d6365)
 #define FORMAT_OPUS    (0x7375704f)
 #define FORMAT_FLAC    (0x43614c66)
+#define FORMAT_MP3     (0x33706d2e)
 
 // encryption schemes
 #define SCHEME_TYPE_CENC (0x63656e63)
