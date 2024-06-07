@@ -596,6 +596,10 @@ codec_config_get_audio_codec_name(request_context_t* request_context, media_info
 		codec_config_copy_string(media_info->codec_name, "fLaC");
 		return VOD_OK;
 
+	case VOD_CODEC_ID_MP3:
+		codec_config_copy_string(media_info->codec_name, "mp4a");
+		return VOD_OK;
+
 	default:
 		return codec_config_get_mp4a_codec_name(request_context, media_info);
 	}
