@@ -550,7 +550,14 @@ codec_config_get_mp4a_codec_name(request_context_t* request_context, media_info_
 {
 	u_char* p;
 
-	if (media_info->extra_data.len > 0)
+	if (media_info->extra_data.len > 0 && media_info->u.audio.object_type_id == 0x67)
+	{
+		p = vod_sprintf(media_info->codec_name.data, "%*s.%02uxD",
+			(size_t)sizeof(uint32_t),
+			&media_info->format,
+			(uint32_t)media_info->u.audio.object_type_id);
+	}
+	else if (media_info->extra_data.len > 0)
 	{
 		p = vod_sprintf(media_info->codec_name.data, "%*s.%02uxD.%01uD",
 			(size_t)sizeof(uint32_t),
