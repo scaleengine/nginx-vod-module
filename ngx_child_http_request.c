@@ -188,6 +188,11 @@ ngx_child_request_wev_handler(ngx_http_request_t *r)
 			b->last = b->pos;
 			break;
 
+		case NGX_HTTP_NOT_FOUND:
+			// A regular 404
+			rc = NGX_HTTP_NOT_FOUND;
+			break;
+
 		default:
 			if (u->headers_in.status_n != 0)
 			{
